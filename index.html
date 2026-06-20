@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Mirror</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h1>Mirror</h1>
+
+        <ul id="categories">
+            <li data-category="all" class="active">All Movies</li>
+            <li data-category="action">Action</li>
+            <li data-category="horror">Horror</li>
+            <li data-category="scifi">Sci-Fi</li>
+            <li data-category="thriller">Thriller</li>
+            <li data-category="fantasy">Fantasy</li>
+            <li data-category="comedy">Comedy</li>
+            <li data-category="romance">Romance</li>
+        </ul>
+    </div>
+
+    <div class="main">
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search movies...">
+        </div>
+
+        <div id="hero" class="hero">
+            <div class="hero-content">
+                <span class="genre">Featured Movie</span>
+
+                <h1 id="movieTitle">
+                    John Wick 4
+                </h1>
+
+                <p>
+                    Browse trailers from different categories.
+                </p>
+
+                <button id="watchTrailer">
+                    ▶ Watch Trailer
+                </button>
+            </div>
+        </div>
+
+        <h2>Movies</h2>
+
+        <div id="movieContainer" class="movie-grid">
+        </div>
+
+    </div>
+
+    <div class="modal">
+
+        <div class="video-box">
+
+            <div class="movie-preview">
+                <img id="modalPoster" src="" alt="Movie Poster">
+
+                <h2 id="modalTitle"></h2>
+
+                <p id="modalDesc">
+                    This is a great movie you selected. Enjoy watching the trailer!
+                </p>
+
+                <button id="modalWatchBtn">
+                    Watch Trailer
+                </button>
+            </div>
+
+            <iframe
+                id="youtubePlayer"
+                src=""
+                allowfullscreen>
+            </iframe>
+
+            <span id="closeVideo">✕</span>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
